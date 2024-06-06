@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #FF7830;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miproyecto.proyectofinal.PantallaDeJuegoController">
+	<children>
+		<Label text="Ventana de juego">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font></Label>
+		<Button fx:id="empezarJuego" mnemonicParsing="false" onAction="#empezarJuego" style="-fx-background-color: #7EFFF7; -fx-border-color: black; -fx-border-radius: 5%;" text="Empezar">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+      		<Button fx:id="atacaJugador" disable="true" mnemonicParsing="false" onAction="#atacaJugador" style="-fx-background-color: #FF5733; -fx-border-color: black; -fx-border-radius: 5%;" text="Atacar">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label text="   " />
+      		<Button fx:id="curarse" disable="true" mnemonicParsing="false" onAction="#curarse" style="-fx-border-color: black; -fx-border-radius: 5%; -fx-background-color: #55FF4D;" text="Curarse">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label text="   " />
+      		<Button fx:id="probarSuerte" disable="true" mnemonicParsing="false" onAction="#probarSuerte" style="-fx-background-color: #FFFF00; -fx-border-color: black; -fx-border-radius: 5%;" text="Prueba suerte">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="probarSuerteMensaje" textFill="#f6ff00">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+		<Label fx:id="vidaAlMaximo" textFill="#00ffaa">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+		<Label fx:id="mensaje">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <Label fx:id="informacionArma" text="Label" textFill="#9000ff">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/jugador.gif" />
+               </image></ImageView>
+            <Label text="VS  ">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imagenEnemigo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="nombreJugadorLabel" prefHeight="17.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+            		<Label fx:id="vidaRestanteJugador" prefHeight="21.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="ataqueDeJugador" prefHeight="21.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="nombreEnemigoLabel" prefHeight="17.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+            		<Label fx:id="vidaRestanteEnemigo" prefHeight="21.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="ataqueDeEnemigo" prefHeight="21.0" prefWidth="400.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+	</children>
+	<padding>
+		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+</VBox>

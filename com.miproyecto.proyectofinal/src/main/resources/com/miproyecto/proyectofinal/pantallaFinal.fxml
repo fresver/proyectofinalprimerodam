@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miproyecto.proyectofinal.PantallaFinalController">
+	<padding>
+		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+   <children>
+      <Label text="Gracias por jugar" textFill="#89ff89">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></Label>
+      <Button fx:id="verGrafica" mnemonicParsing="false" onAction="#verGrafica" style="-fx-background-color: #c0c0c0; -fx-border-color: black; -fx-border-radius: 5%;" text="Ver gráfica">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="descargarWord" mnemonicParsing="false" onAction="#descargarWord" style="-fx-background-color: #30AAFF; -fx-border-color: black; -fx-border-radius: 5%;" text="Descargar Word">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="descargarPdf" mnemonicParsing="false" onAction="#descargarPdf" style="-fx-background-color: #FF5252; -fx-border-color: black; -fx-border-radius: 5%;" text="Descargar PDF">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="salirDelPrograma" mnemonicParsing="false" onAction="#salirDelPrograma" style="-fx-background-color: #c0c0c0; -fx-border-color: black; -fx-border-radius: 5%;" text="Salir">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</VBox>
